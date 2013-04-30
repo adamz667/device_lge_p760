@@ -75,7 +75,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lights.omap4 \
     libaudioutils \
-    audio.a2dp.default
+    audio.a2dp.default \
+    audio_policy.default
 
 PRODUCT_PACKAGES += \
     OMXCore \
