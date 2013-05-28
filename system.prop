@@ -13,6 +13,10 @@ dalvik.vm.dexopt-flags=m=y,u=n
 
 ro.sf.lcd_density=240
 
+# hardware renderer + tile rendering
+debug.composition.type=mdp
+debug.enabletr=true
+
 ## Radio stuffs
 #ro.telephony.call_ring.multiple=false
 #ro.telephony.call_ring.delay=3000
@@ -48,3 +52,11 @@ lge.nfc.defaultonoff=on
 ro.bt.bdaddr_path=/sys/devices/platform/bd_address/bdaddr_if
 
 persist.sys.usb.config=mtp,adb
+
+# Hardware info
+ro.device.chipset=TI OMAP4 4430
+ro.device.cpu=1.0 GHz Dual Core ARM Cortex-A9
+ro.device.gpu=PowerVR 540
+ro.device.rear_cam=5 Mpx
+ro.device.front_cam=0.3 Mpx
+ro.device.screen_res=540x960px
