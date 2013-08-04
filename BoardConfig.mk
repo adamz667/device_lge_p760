@@ -36,7 +36,8 @@ BOARD_BLUEDROID_VENDOR_CONF := device/lge/p760/bluetooth/vnd_lge_p760.txt
 
 BOARD_HAS_NO_MISC_PARTITION := true
 
-#TARGET_RECOVERY_PRE_COMMAND := "/system/bin/setup-recovery"
+TARGET_RECOVERY_FSTAB = device/lge/p760/fstab.u2
+RECOVERY_FSTAB_VERSION = 2
 
 TARGET_BOOTLOADER_BOARD_NAME := p760
 
