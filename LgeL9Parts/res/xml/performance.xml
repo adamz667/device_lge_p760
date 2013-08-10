@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/app_name">
+
+    <PreferenceCategory android:key="category_performance">
+        <ListPreference
+            android:key="cpu_overclock"
+            android:title="@string/cpu_overclock_title"
+            android:entries="@array/cpu_overclock_entries"
+            android:entryValues="@array/cpu_overclock_values"
+            android:defaultValue="1" />
+    
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Advanced Settings</string>
+
+    <string name="general_title">GENERAL</string>
+    <string name="performance_title">PERFORMANCE</string>
+
+    <string name="category_general_title">General</string>
+    <string name="category_performance_title">Performance</string>
+
+    <string name="led_title">Lights</string>
+    <string name="touch_led_title">Disable Touch Lights</string>
+    <string name="touch_led_summary">LEDs will not be turning on touch.</string>
+
+    <string name="cpu_overclock_title">Maximum CPU Clock Speed</string>
+
+</resources>
