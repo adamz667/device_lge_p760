@@ -12,6 +12,10 @@
     <string name="touch_led_title">Disable Touch Lights</string>
     <string name="touch_led_summary">LEDs will not be turning on touch.</string>
 
+    <string name="oc_title">Overclocking</string>
     <string name="cpu_overclock_title">Maximum CPU Clock Speed</string>
-
+    
+    <string name="memory_title">Memory Management</string>
+    <string name="ksm_enable_title">KSM Enable</string>
+    <string name="ksm_enable_summary">Enable Kernel SamePage Merging</string>
 </resources>

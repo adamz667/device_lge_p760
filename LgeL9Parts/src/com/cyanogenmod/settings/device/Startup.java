@@ -9,9 +9,7 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent bootintent) {
         GeneralActivity.restore(context);
-        GpuOverclock.restore(context);
-        IvaOverclock.restore(context);
-        MaxSleepFrequency.restore(context);
-        AudioTuningPreference.restore(context);
+        CpuOverclock.restore(context);
+	KsmEnable.restore(context);
     }
 }
