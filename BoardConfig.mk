@@ -19,13 +19,13 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 NEEDS_ARM_ERRATA_754319_754320 := true
 BOARD_GLOBAL_CFLAGS += -DNEEDS_ARM_ERRATA_754319_754320
 
-TARGET_USE_O3 ?= true
-TARGET_USE_LINARO_STRING_ROUTINES ?= true
-
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 
+TARGET_GCC_VERSION_EXP := 4.7
+TARGET_USE_O3 ?= true
+TARGET_USE_LINARO_STRING_ROUTINES ?= true
 
 # Try to build the kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_p760_defconfig
@@ -35,7 +35,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/lge/p760/bluetooth/vnd_lge_p760.txt
 
 BOARD_HAS_NO_MISC_PARTITION := true
 
@@ -100,9 +99,6 @@ BOARD_RIL_CLASS := ../../../device/lge/p760/ril/
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/p760/bluetooth
 
 BOARD_CUSTOM_GRAPHICS := ../../../device/lge/p760/recovery-gfx.c
-
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
-
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
 BOARD_SEPOLICY_DIRS := \
@@ -113,3 +109,5 @@ BOARD_SEPOLICY_UNION := \
     pvrsrvinit.te \
     device.te \
     domain.te
+
+BOARD_HARDWARE_CLASS := device/lge/p760/cmhw/
