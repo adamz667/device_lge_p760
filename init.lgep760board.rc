@@ -45,6 +45,14 @@ on post-fs-data
     chown system system /dev/hdcp
     chmod 0644 /dev/hdcp
 
+# Hardware tunable perms
+    chown root system /sys/devices/omapdss/display0/gamma_tuning
+    chown root system /sys/devices/platform/tspdrv/nforce_timed
+    chmod 0664 /sys/devices/omapdss/display0/gamma_tuning
+    chmod 0664 /sys/devices/platform/tspdrv/nforce_timed
+    restorecon /sys/devices/omapdss/display0/gamma_tuning
+    restorecon /sys/devices/platform/tspdrv/nforce_timed
+
 # Create Directory for widevine
     mkdir /persist/widevine 0770 drm system
 
@@ -249,11 +257,6 @@ on boot
     ## Sensors daemon stuff
     mkdir /data/misc/sens 2755 system compass
 
-    chown radio system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    chown system system /sys/devices/system/cpu/cpu0/cpufreq/UV_mV_table
-    chmod 0666 /sys/devices/system/cpu/cpu0/cpufreq/UV_mV_table
-
 #LGE_CHANGE_S 20120228, soye.park@lge.com [data] Increase TCP Buffer Size
     setprop net.tcp.buffersize.default 4096,87380,393216,4096,16384,110208
     setprop net.tcp.buffersize.wifi    524288,1048576,2097152,262144,524288,1048576
@@ -354,7 +357,7 @@ on property:dev.bootcomplete=1
 
 on property:dev.bootcomplete=1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
-    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 20000
+    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 19000
     write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 20000
 
 service charger /charger
