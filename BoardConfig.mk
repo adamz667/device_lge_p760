@@ -28,7 +28,7 @@ TARGET_USE_O3 ?= true
 TARGET_USE_LINARO_STRING_ROUTINES ?= true
 
 # Try to build the kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_p760_defconfig
+TARGET_KERNEL_CONFIG := asap_p760_defconfig
 TARGET_KERNEL_SOURCE := kernel/lge/omap4-common
 
 BOARD_HAS_NO_SELECT_BUTTON := true
